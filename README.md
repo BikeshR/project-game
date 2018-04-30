@@ -84,7 +84,8 @@
   - Added Bootstrap, jquery ...
 - Added the 9x9 table
 - Added the classes
-- Adding the different states in CSS
+- Adding the different states in CSS (inside/outside select/deselect)
+- Doing javascript with DOM manipulation first and adding jquery later
 
 
 ## Things to keep in mind
