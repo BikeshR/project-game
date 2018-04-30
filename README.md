@@ -68,6 +68,7 @@
 - 5x5 done for 1-9
 - HTML done, CSS style done
 - Javacscript done for 2 states
+- The outside current total is shown
 
 ## Sprint 2
 - 5x5 and 7x7 done for 2-4 numbers
@@ -76,6 +77,14 @@
 - Add sound and animation
 - Add reset, undo
 - Add timer for leaderboard
+- The outside current total is shown on click
+
+## Steps
+- Initial Setup
+  - Added Bootstrap, jquery ...
+- Added the 9x9 table
+- Added the classes
+- Adding the different states in CSS
 
 
 ## Things to keep in mind
