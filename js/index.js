@@ -169,7 +169,7 @@ function winCondition(){
 }
 
 
-order()
+order();
 function order(){
   getOutsideSum();
   insideClick();

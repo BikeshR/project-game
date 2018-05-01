@@ -87,6 +87,9 @@
 - Adding the different states in CSS (inside/outside select/deselect)
 - Doing javascript with DOM manipulation first and adding jquery later
 - Added checksum of the 'current' numbers
+- Made the sum only equal to the selected numbers
+- Made a check for two outside numbers to be equal
+-
 - Need to make the sum equal only the selected numbers
 - Need to check if the two outside numbers are equal
 
