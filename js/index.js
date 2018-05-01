@@ -1,4 +1,4 @@
-
+var outsideSum = document.getElementsByClassName('outside-sum');
 
 function getColumnArrays(){ //makes an array of column arrays
   // Each column as array of integers
@@ -126,22 +126,8 @@ function getOutsideSum(){
   outsideSum[10].innerHTML = outsideSum[9].innerHTML;
   outsideSum[12].innerHTML = outsideSum[11].innerHTML;
   outsideSum[14].innerHTML = outsideSum[13].innerHTML;
-  return;
+  return outsideSum;
 }
-
-getOutsideSum();
-insideClick();
-// var allCellTags = ['col-1', 'col-2', 'col-3', 'col-4', 'col-5', 'row-1', 'row-2', 'row-3', 'row-4', 'row-5']
-// function sumRemove(insideTag){
-//   for (var i = 0; i < allCellTags.length; i++) {
-//     if (insideTag.classList.contains(allCellTags[i])) {
-//       insideTag.classList.remove(allCellTags[i]);
-//     }else{
-//       return;
-//     }
-//   }
-//   return;
-// }
 
 
 
@@ -155,18 +141,36 @@ function insideClick(){ // Selecting/Deselecting inside numbers
       }else{ //deselect
         this.classList.add('inside-deselect');
       }
-      getOutsideSum();
-      // console.log(getColumnArrays());
+      var x = getOutsideSum();
+      outsideCheck(x);
+      winCondition();
     });
+  }
+}
+var outsideAim = document.getElementsByClassName('outside-aim');
+
+// Checking if equal
+function outsideCheck(lastOutsideSum){
+
+  for (var i = 0; i < outsideAim.length; i++) {
+    if (outsideAim[i].innerHTML == lastOutsideSum[i].innerHTML) {
+      outsideAim[i].classList.add('outside-solved');
+    }else{
+      outsideAim[i].classList.remove('outside-solved');
+    }
+  }
+}
+
+// Checking if all sums are equal to all aims
+function winCondition(){
+  if (outsideAim[0].classList.contains('outside-solved') && outsideAim[1].classList.contains('outside-solved') && outsideAim[2].classList.contains('outside-solved') && outsideAim[3].classList.contains('outside-solved') && outsideAim[4].classList.contains('outside-solved') && outsideAim[5].classList.contains('outside-solved') && outsideAim[7].classList.contains('outside-solved') && outsideAim[9].classList.contains('outside-solved') && outsideAim[11].classList.contains('outside-solved') && outsideAim[13].classList.contains('outside-solved') && outsideAim[15].classList.contains('outside-solved')) {
+    console.log('Done');
   }
 }
 
 
-
-
-
-
-
-
-
-// Checking if equal
+order()
+function order(){
+  getOutsideSum();
+  insideClick();
+}
