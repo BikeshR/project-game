@@ -86,6 +86,9 @@
 - Added the classes
 - Adding the different states in CSS (inside/outside select/deselect)
 - Doing javascript with DOM manipulation first and adding jquery later
+- Added checksum of the 'current' numbers
+- Need to make the sum equal only the selected numbers
+- Need to check if the two outside numbers are equal
 
 
 ## Things to keep in mind
