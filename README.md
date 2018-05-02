@@ -1,5 +1,9 @@
 # Sparta Core Project 1
 
+## Instruction
+
+Goal is to select the numbers inside so that each row and column add up to the number outside it. Game starts with all numbers selected. Deselect a number to remove it from the sum.
+
 ## Task
 - Consolidate all of the technology learnt in the 2 weeks.
 - **Browser based game!** using html, css and javascript.
@@ -89,10 +93,6 @@
 - Added checksum of the 'current' numbers
 - Made the sum only equal to the selected numbers
 - Made a check for two outside numbers to be equal
--
-- Need to make the sum equal only the selected numbers
-- Need to check if the two outside numbers are equal
-
 
 ## Things to keep in mind
 Make sure that your code and files are:
