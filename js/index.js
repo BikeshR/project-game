@@ -1,5 +1,3 @@
-var outsideSum = document.getElementsByClassName('outside-sum');
-
 function getColumnArrays(){ //makes an array of column arrays
   // Each column as array of integers
   var colOne = [];
@@ -129,8 +127,6 @@ function getOutsideSum(){
   return outsideSum;
 }
 
-
-
 function insideClick(){ // Selecting/Deselecting inside numbers
   // Inside 5x5 cells with 25 elements
   var insideNumber = document.getElementsByClassName('inside');
@@ -164,13 +160,14 @@ function outsideCheck(lastOutsideSum){
 // Checking if all sums are equal to all aims
 function winCondition(){
   if (outsideAim[0].classList.contains('outside-solved') && outsideAim[1].classList.contains('outside-solved') && outsideAim[2].classList.contains('outside-solved') && outsideAim[3].classList.contains('outside-solved') && outsideAim[4].classList.contains('outside-solved') && outsideAim[5].classList.contains('outside-solved') && outsideAim[7].classList.contains('outside-solved') && outsideAim[9].classList.contains('outside-solved') && outsideAim[11].classList.contains('outside-solved') && outsideAim[13].classList.contains('outside-solved') && outsideAim[15].classList.contains('outside-solved')) {
-    console.log('Done');
+    $(function() {
+      $("#winDialog").show();
+    });
   }
 }
 
-
-order();
 function order(){
   getOutsideSum();
   insideClick();
 }
+order();
