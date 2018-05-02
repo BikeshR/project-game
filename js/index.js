@@ -132,6 +132,8 @@ function insideClick(){ // Selecting/Deselecting inside numbers
   var insideNumber = document.getElementsByClassName('inside');
   for (var i = 0; i < insideNumber.length; i++) {
     insideNumber[i].addEventListener('click', function(event){
+      var audio = document.getElementById('selectAudio');
+      audio.play();
       if (this.classList.contains('inside-deselect')) { //select
         this.classList.remove('inside-deselect');
       }else{ //deselect
@@ -143,11 +145,10 @@ function insideClick(){ // Selecting/Deselecting inside numbers
     });
   }
 }
-var outsideAim = document.getElementsByClassName('outside-aim');
 
+var outsideAim = document.getElementsByClassName('outside-aim');
 // Checking if equal
 function outsideCheck(lastOutsideSum){
-
   for (var i = 0; i < outsideAim.length; i++) {
     if (outsideAim[i].innerHTML == lastOutsideSum[i].innerHTML) {
       outsideAim[i].classList.add('outside-solved');

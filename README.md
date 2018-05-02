@@ -70,13 +70,12 @@ The goal is to select the numbers inside so that each row and column add up to t
 
 ## Sprint 1 (Due Wednesday 10am)
 - 5x5 done for 1-9
-- HTML done, CSS style done
-- Javacscript done for 2 states
-- The outside current total is shown
+- HTML done, CSS style done (Half day)
+- Javascript done for 2 states (1.5 days)
 
 ## Sprint 2 (Due Friday 11:30am)
 - Add Instructions, intro page/javascript layer
-- Add win feedback by adding modal
+- Add win feedback
 - Add sound for clicks and hover
 - Add reset
 - Apply DRY, add comments
@@ -98,6 +97,7 @@ The goal is to select the numbers inside so that each row and column add up to t
 - Make a function to check if all of the rows and columns are solved
 - Added win dialog
 - Added instructions
+- Added sound effect for select
 
 
 ## Things to keep in mind
