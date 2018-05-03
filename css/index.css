@@ -6,10 +6,10 @@ body {
 
 h1 {
   font: normal 80px/1 Impact, Charcoal, sans-serif;
-  color: #001738;
+  color: #003684;
   text-align: center;
   letter-spacing: 5px;
-  text-shadow: 1px 1px 70px #11ff60;
+  text-shadow: -1px 0 #11ff60, 0 1px #11ff60, 1px 0 #11ff60, 0 -1px #11ff60;
   padding-bottom: 25px;
 }
 
@@ -28,7 +28,6 @@ p {
   padding-left: 20%;
   padding-right: 20%;
 }
-
 
 /* Main Game */
 table {

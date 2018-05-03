@@ -78,10 +78,8 @@ function getOutsideAim() {
 getOutsideAim();
 // Generating table end
 
-
-
-
-function getColumnArrays(){ //makes an array of column arrays
+// For making an array of column arrays
+function getColumnArrays(){
   // Each column as array of integers
   var colOne = [];
   var col1 = document.getElementsByClassName('col-1');
@@ -132,7 +130,8 @@ function getColumnArrays(){ //makes an array of column arrays
   return colNumbers;
 }
 
-function getRowArrays(){ //makes an array of row arrays
+// For making an array of row arrays
+function getRowArrays(){
   // Each row as array of integers
   var rowOne = [];
   var row1 = document.getElementsByClassName('row-1');
@@ -183,6 +182,7 @@ function getRowArrays(){ //makes an array of row arrays
   return rowNumbers;
 }
 
+// For getting the outermost value of current sum
 function getOutsideSum(){
   // Variable for the outside-sum (outermost cells / array of 20 elements)
   var outsideSum = document.getElementsByClassName('outside-sum');
@@ -210,7 +210,8 @@ function getOutsideSum(){
   return outsideSum;
 }
 
-function insideClick(){ // Selecting/Deselecting inside numbers
+// Selecting/Deselecting inside numbers
+function insideClick(){
   // Inside 5x5 cells with 25 elements
   var insideNumber = document.getElementsByClassName('inside');
   for (var i = 0; i < insideNumber.length; i++) {
@@ -260,66 +261,10 @@ function startGame(){
   });
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Ordering of functions
+// Ordering of functions after table generation
 function order(){
   startGame();
   getOutsideSum();
   insideClick();
 }
 order();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// end
