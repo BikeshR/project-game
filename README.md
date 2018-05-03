@@ -99,6 +99,7 @@ The goal is to select the numbers inside so that each row and column add up to t
 - Added instructions
 - Added sound effect for select
 - Added a start button and new game button
+- Adding randomness
 
 
 ## Things to keep in mind

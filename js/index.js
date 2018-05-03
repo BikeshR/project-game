@@ -1,3 +1,86 @@
+// Generating random table
+
+// For picking a random number between two numbers
+function randBetween(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
+
+// For picking 25 random numbers betwen 1-9 and putting it in an array
+function createRandomGrid(){
+  var randGrid = [];
+  for (var i = 0; i < 25; i++) {
+    randGrid.push(randBetween(1,9));
+  }
+  return randGrid;
+}
+
+// For replacing the existing inside values with the randomly generated
+function replaceInside(newGrid) {
+  var insideNumber = document.getElementsByClassName('inside');
+  for (var i = 0; i < newGrid.length; i++) {
+    insideNumber[i].innerHTML = newGrid[i];
+  }
+  return insideNumber;
+}
+
+// Call replaceInside() to change the numbers in the 5x5
+var insideFinal = replaceInside(createRandomGrid());
+
+// For randomly removing numbers for the outsideAim
+function removeAtRandom() {
+  var columnArrays = getColumnArrays(); // To get the array of arrays of columns
+  for (var i = 0; i < columnArrays.length; i++) { //loop for each array
+    var n = randBetween(1,4); // To get the number of numbers removed
+    for (j = 0; j < n; j++) { // loop for elements of the inside array
+      var m = randBetween(0,4); // To get the index of array to be removed
+      columnArrays[i][m] = 0;
+    }
+  }
+  return columnArrays;
+}
+
+// For getting the sum of the new arrays to create outsideAim
+function getOutsideAim() {
+  // Variable for the outside-sum (outermost cells / array of 20 elements)
+  var outsideAim = document.getElementsByClassName('outside-aim');
+  var callRemoveAtRandom = removeAtRandom();
+  console.log(callRemoveAtRandom);
+  // sum for top outsideAim (row 2 of 9x9 / first 5 elements)
+  for (var i = 0; i < outsideAim.length/4; i++) {
+    outsideAim[i].innerHTML = callRemoveAtRandom[i].reduce(function(a, b) {
+      return a + b;
+    });
+  }
+  // sum for left outsideAim (column 2 of 9x9 / next 5 elements with increment of 2)
+  var i,j;
+  for (i = 5, j = 0; i < outsideAim.length*3/4, j < 5; i+=2, j++) {
+    removeAtRandomRow = math.transpose(callRemoveAtRandom);
+    outsideAim[i].innerHTML = removeAtRandomRow[j].reduce(function(a, b) {
+      return a + b;
+    });
+  }
+  // sum for bottom outsideAim (row 8 of 9x9)
+  outsideAim[15].innerHTML = outsideAim[0].innerHTML;
+  outsideAim[16].innerHTML = outsideAim[1].innerHTML;
+  outsideAim[17].innerHTML = outsideAim[2].innerHTML;
+  outsideAim[18].innerHTML = outsideAim[3].innerHTML;
+  outsideAim[19].innerHTML = outsideAim[4].innerHTML;
+  // sum for right outsideAim (column 8 of 9x9)
+  outsideAim[6].innerHTML = outsideAim[5].innerHTML;
+  outsideAim[8].innerHTML = outsideAim[7].innerHTML;
+  outsideAim[10].innerHTML = outsideAim[9].innerHTML;
+  outsideAim[12].innerHTML = outsideAim[11].innerHTML;
+  outsideAim[14].innerHTML = outsideAim[13].innerHTML;
+  return outsideAim;
+}
+
+// Call getOutsideAim() to generate a problem with right answer
+getOutsideAim();
+// Generating table end
+
+
+
+
 function getColumnArrays(){ //makes an array of column arrays
   // Each column as array of integers
   var colOne = [];
@@ -177,9 +260,66 @@ function startGame(){
   });
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Ordering of functions
 function order(){
   startGame();
   getOutsideSum();
   insideClick();
 }
 order();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// end
