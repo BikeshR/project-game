@@ -164,10 +164,21 @@ function winCondition(){
     $(function() {
       $("#winDialog").show();
     });
+    $("#newGame").click(function(){
+      location.reload();
+    });
   }
 }
 
+// Start button click
+function startGame(){
+  $("#startButton").click(function(){
+    $("#startGame").hide();
+  });
+}
+
 function order(){
+  startGame();
   getOutsideSum();
   insideClick();
 }

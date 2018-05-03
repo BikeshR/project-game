@@ -76,6 +76,7 @@ td {
   background-color: #0043b5;
   text-align: center;
   line-height: 40px;
+  cursor: pointer;
 }
 
 .inside-deselect {
@@ -86,6 +87,27 @@ td {
 
 .inside:hover, .inside-deselect:hover {
   opacity: 0.5;
+}
+
+/* Start Game Button */
+#startGame {
+  display: block;
+  background-color: black;
+  position: fixed;
+  z-index: 1;
+  top: 135px;
+  width: 100%;
+  height: 450px;
+  padding-top: 165px;
+}
+
+#startButton, #newGame {
+  font-size: 40px;
+  color: #fafafa;
+  background-color: black;
+  text-align: center;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
 
 /* Win Dialog */

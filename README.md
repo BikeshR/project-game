@@ -76,8 +76,8 @@ The goal is to select the numbers inside so that each row and column add up to t
 ## Sprint 2 (Due Friday 11:30am)
 - Add Instructions, intro page/javascript layer
 - Add win feedback
-- Add sound for clicks and hover
-- Add reset
+- Add sound for clicks
+- Add start game and new game button
 - Apply DRY, add comments
 - Apply jQuery where possible
 - Add randomness to new problems (BONUS)
@@ -98,6 +98,7 @@ The goal is to select the numbers inside so that each row and column add up to t
 - Added win dialog
 - Added instructions
 - Added sound effect for select
+- Added a start button and new game button
 
 
 ## Things to keep in mind
