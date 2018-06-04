@@ -14,7 +14,7 @@ function createRandomGrid(){
   return randGrid;
 }
 
-// For replacing the existing inside values with the randomly generated
+// For replacing the existing inside values with the randomly generated values
 function replaceInside(newGrid) {
   var insideNumber = document.getElementsByClassName('inside');
   for (var i = 0; i < newGrid.length; i++) {
@@ -30,7 +30,7 @@ var insideFinal = replaceInside(createRandomGrid());
 function removeAtRandom() {
   var columnArrays = getColumnArrays(); // To get the array of arrays of columns
   for (var i = 0; i < columnArrays.length; i++) { //loop for each array
-    var n = randBetween(1,4); // To get the number of numbers removed
+    var n = randBetween(1,4); // To get the number of numbers to be removed
     for (j = 0; j < n; j++) { // loop for elements of the inside array
       var m = randBetween(0,4); // To get the index of array to be removed
       columnArrays[i][m] = 0;

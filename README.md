@@ -1,7 +1,6 @@
 # Sparta Core Project 1
 
 ## Instruction
-
 The goal is to make the sum of numbers in each row and column be equal to the number outside them. Game starts with all numbers selected. Deselect a number to remove it from the sum. The outermost number is the current sum of selected numbers.
 
 ## Implementation
@@ -32,7 +31,7 @@ The goal is to make the sum of numbers in each row and column be equal to the nu
 ## Sprint 2 (Due Friday 11:30am)
 - Added win dialog
 - Added instructions
-- Added sound efect for select
+- Added sound effect for select
 - Added a start button and new game button on win dialog
 - Added randomness. Steps:
   - Pick a random number between 1 and 9
