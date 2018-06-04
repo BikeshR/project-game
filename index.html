@@ -5,29 +5,289 @@
     <title>Game Page</title>
     <!-- Bootstrap CDN 3.3.7-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- Downloaded version of compiled and minified CSS -->
     <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
-    <h1> Rullo </h1>
+    <h1>Rullo</h1>
+
+    <!-- Game 5x5 -->
+    <main class="container">
+      <table> <!--9x9-->
+        <thead> <!-- Top Row 9x2 -->
+          <tr> <!-- Current total top row 9x1-->
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+          </tr>
+          <tr> <!-- Aim total top row 9x1-->
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td>
+              <div class="outside-aim">9</div>
+            </td>
+            <td>
+              <div class="outside-aim">15</div>
+            </td>
+            <td>
+              <div class="outside-aim">25</div>
+            </td>
+            <td>
+              <div class="outside-aim">12</div>
+            </td>
+            <td>
+              <div class="outside-aim">20</div>
+            </td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+          </tr>
+        </thead>
+        <tbody> <!-- Middle 5x5 -->
+          <tr> <!-- Row 1 -->
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+            <td>
+              <div class="outside-aim">17</div>
+            </td>
+            <td>
+              <div class="inside col-1 row-1">8</div>
+            </td>
+            <td>
+              <div class="inside col-2 row-1">6</div>
+            </td>
+            <td>
+              <div class="inside col-3 row-1">4</div>
+            </td>
+            <td>
+              <div class="inside col-4 row-1">1</div>
+            </td>
+            <td>
+              <div class="inside col-5 row-1">6</div>
+            </td>
+            <td>
+              <div class="outside-aim">17</div>
+            </td>
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+          </tr>
+          <tr> <!-- Row 2 -->
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+            <td>
+              <div class="outside-aim">20</div>
+            </td>
+            <td>
+              <div class="inside col-1 row-2">6</div>
+            </td>
+            <td>
+              <div class="inside col-2 row-2">8</div>
+            </td>
+            <td>
+              <div class="inside col-3 row-2">7</div>
+            </td>
+            <td>
+              <div class="inside col-4 row-2">5</div>
+            </td>
+            <td>
+              <div class="inside col-5 row-2">4</div>
+            </td>
+            <td>
+              <div class="outside-aim">20</div>
+            </td>
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+          </tr>
+          <tr> <!-- Row 3 -->
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+            <td>
+              <div class="outside-aim">13</div>
+            </td>
+            <td>
+              <div class="inside col-1 row-3">6</div>
+            </td>
+            <td>
+              <div class="inside col-2 row-3">7</div>
+            </td>
+            <td>
+              <div class="inside col-3 row-3">6</div>
+            </td>
+            <td>
+              <div class="inside col-4 row-3">6</div>
+            </td>
+            <td>
+              <div class="inside col-5 row-3">7</div>
+            </td>
+            <td>
+              <div class="outside-aim">13</div>
+            </td>
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+          </tr>
+          <tr> <!-- Row 4 -->
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+            <td>
+              <div class="outside-aim">18</div>
+            </td>
+            <td>
+              <div class="inside col-1 row-4">9</div>
+            </td>
+            <td>
+              <div class="inside col-2 row-4">5</div>
+            </td>
+            <td>
+              <div class="inside col-3 row-4">8</div>
+            </td>
+            <td>
+              <div class="inside col-4 row-4">1</div>
+            </td>
+            <td>
+              <div class="inside col-5 row-4">5</div>
+            </td>
+            <td>
+              <div class="outside-aim">18</div>
+            </td>
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+          </tr>
+          <tr> <!-- Row 5 -->
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+            <td>
+              <div class="outside-aim">13</div>
+            </td>
+            <td>
+              <div class="inside col-1 row-5">9</div>
+            </td>
+            <td>
+              <div class="inside col-2 row-5">1</div>
+            </td>
+            <td>
+              <div class="inside col-3 row-5">9</div>
+            </td>
+            <td>
+              <div class="inside col-4 row-5">5</div>
+            </td>
+            <td>
+              <div class="inside col-5 row-5">7</div>
+            </td>
+            <td>
+              <div class="outside-aim">13</div>
+            </td>
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot> <!-- Bottom Row 9x2 -->
+          <tr> <!-- Aim total bottom row 9x1-->
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td>
+              <div class="outside-aim">9</div>
+            </td>
+            <td>
+              <div class="outside-aim">15</div>
+            </td>
+            <td>
+              <div class="outside-aim">25</div>
+            </td>
+            <td>
+              <div class="outside-aim">12</div>
+            </td>
+            <td>
+              <div class="outside-aim">20</div>
+            </td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+          </tr>
+          <tr> <!-- Current total bottom row 9x1-->
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+            <td>
+              <div class="outside-sum"></div>
+            </td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </main>
+
+    <!-- Start Game -->
+    <div id="startGame">
+      <p id="startButton">Start Game</p>
+    </div>
+
+    <!-- Win Dialog -->
+    <div id="winDialog">
+        <h1>You Win!</h1>
+        <p id="newGame">New Game</p>
+    </div>
+
+    <!-- Instruction -->
+    <div class="container">
+      <h2>Instruction</h2>
+      <p>The goal is to make the sum of numbers in each row and column be equal to the number outside them. Game starts with all numbers selected. Deselect a number to remove it from the sum. The outermost number is the current sum of selected numbers.</p>
+    </div>
+
+    <!-- Sound effect -->
+    <audio id="selectAudio" src="audio/select.mp3"></audio>
 
 
-
-
-
-
-
-
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <!-- Math.js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/4.2.1/math.min.js">
+    </script>
+    <!-- <script type="text/javascript" src="js/math.min.js">
+    </script> -->
+
+    <!-- Bootstrap js -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom js -->
     <script type="text/javascript" src="js/index.js">
     </script>
   </body>
