@@ -1,4 +1,4 @@
-# Sparta Core Project 1
+# Core Project 1
 
 ## Instruction
 The goal is to make the sum of numbers in each row and column be equal to the number outside them. Game starts with all numbers selected. Deselect a number to remove it from the sum. The outermost number is the current sum of selected numbers.
